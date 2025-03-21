@@ -47,10 +47,14 @@ public class Main {
 		
 		visitor1.showTotalPrice();
 		visitor2.showTotalPrice();
+		System.out.println("=============================================================");
 		
 		chef1.showCookHistory();
+		System.out.println(" ");
 		chef2.showCookHistory();
+		System.out.println("=============================================================");
 		
 		restaurant.showTotalIncome();
+		System.out.println("=============================================================");
 	}
 }

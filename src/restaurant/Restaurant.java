@@ -32,7 +32,7 @@ public class Restaurant {
 		for (Menu menu : menus) {
 			for (Food food : menu.getFoods()) {
 				if (menuChoice.equals(food.getName())) {
-					String order = chef.getName() + visitor.getName() + menuChoice + amount;
+					String order = "Customer: "+ visitor.getName() + " - " + "Ordered: " + menuChoice + "(" + amount + ")";
 					chef.setOrderHistories(order);
 					visitor.setTotalPrice((amount*food.getPrice()) + visitor.getTotalPrice());
 					income += (amount*food.getPrice());
@@ -42,20 +42,21 @@ public class Restaurant {
 	}
 
 	public void showMenu() {
-		System.out.println("=== " + this.name +" Menu ===");
+		System.out.println("==================== " + this.name +"'s Menu ====================");
 		for (Menu menu : menus) {
 			System.out.println(menu.getMenu());
 			for (Food food : menu.getFoods()) {
-				System.out.println(food.getName() + " " + food.getPrice());
+				System.out.println("   o " + food.getName() + " - Price: " + food.getPrice());
 			}
 		}
 	}
 
 	public void showChef() {
-		System.out.println("=== Chef ===");
+		System.out.println("==================== " + this.name +"'s Chef ====================");
 		for (Chef chef : chefs) {
-			System.out.println(chef.getName());
+			System.out.println("   o Chef " + chef.getName());
 		}
+		System.out.println("=============================================================");
 	}
 
 	public void showTotalIncome() {

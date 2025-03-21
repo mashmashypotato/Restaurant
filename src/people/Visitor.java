@@ -17,7 +17,7 @@ public class Visitor {
 	}
 
 	public void showTotalPrice() {
-		System.out.println("Total Price: " + totalPrice);
+		System.out.println( "Customer (" + this.name + ") total price is " + totalPrice);
 	}
 	
 	public void addTotalPrice(int price){

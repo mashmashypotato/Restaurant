@@ -19,10 +19,11 @@ public class Chef {
 	}
 
 	public void showCookHistory() {
-		System.out.println("Had cooked: ");
+		System.out.println("Chef " + this.name + "'s Cooking History: ");
 		for (String string : orderHistories) {
-			System.out.println(string);
+			System.out.println("   o " + string);
 		}
+//		System.out.println(" ");
 	}
 
 	public ArrayList<String> getOrderHistories() {
